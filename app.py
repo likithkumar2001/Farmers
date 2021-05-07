@@ -23,7 +23,7 @@ for y in mydoc:
     x=y
 st.write('Place :', x['title'])
 st.write('Message :', x['Message'])
-if x['Message'] != ' No data Available' :
+if x['Message'] != 'No data Available' :
     st.write(" Date of issue : ", x['Date of issue'])
     if (x['Time of issue'] < 12):
         st.write(" Time of issue : ", str(x['Time of issue'])+" AM")
