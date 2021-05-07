@@ -34,4 +34,3 @@ elif(x['Valid upto'] >= 12 and x['Valid upto'] < 13  ):
 
 else:
     st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
-st.write(x)
