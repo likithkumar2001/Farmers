@@ -1,6 +1,5 @@
 streamlit
 numpy
-json
 pandas == 1.1.3
 urllib
 pymongo
