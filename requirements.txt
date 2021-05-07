@@ -1,1 +1,8 @@
-
+streamlit
+numpy
+pandas
+json
+urllib
+pymongo
+dns
+datetime
