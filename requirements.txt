@@ -2,4 +2,4 @@ streamlit
 numpy
 pandas
 pymongo
-pip install dnspython
+
