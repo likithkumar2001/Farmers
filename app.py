@@ -1,4 +1,4 @@
-import Data_query
+#import Data_query
 import streamlit as st
 import numpy as np
 import pandas as pd
