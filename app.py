@@ -7,6 +7,7 @@ import urllib
 import pymongo
 import dns
 from datetime import datetime
+
 st.title("**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**")
 uri = 'mongodb+srv://likith:' + urllib.parse.quote(
     "Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
