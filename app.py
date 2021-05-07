@@ -10,8 +10,8 @@ from datetime import datetime
 def trans(language,text):
     from googletrans import Translator, constants
     translator = Translator()
-    Text_message = translator.translate(text, dest=language)
-    return Text_message.text
+    Text_message = translator.translate(text, dest=language).text
+    return Text_message
 
 uri = 'mongodb+srv://likith:' + urllib.parse.quote(
     "Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
