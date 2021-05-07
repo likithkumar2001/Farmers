@@ -9,6 +9,6 @@ import dns
 from datetime import datetime
 import data_accumulation
 data = data_accumulation.web_scrapping()
-info = data_cleaning(data)
-store_data(info)
+info = data_accumulation.data_cleaning(data)
+data_accumulation.store_data(info)
 info
