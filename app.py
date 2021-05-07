@@ -7,21 +7,13 @@ import urllib
 from pymongo import MongoClient
 import dns
 from datetime import datetime
-def trans(language,text):
-    from googletrans import Translator, constants
-    translator = Translator()
-    Text_message = translator.translate(text, dest=language).text
-    return Text_message
 
 uri = 'mongodb+srv://likith:' + urllib.parse.quote(
     "Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 client = MongoClient(uri)
 db = client.weather
 data = db.data
-lang=['English','Telugu','Hindi']
-la=st.sidebar.selectbox('select language',lang)
-lan = ['en','te','hi']
-st.title(trans(lan[lang.index(la)], 'HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....'))
+st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
 result = st.selectbox('Type your place here.....',data.distinct( "title"))
 x = {'title': result}
 mydoc = data.find(x)
