@@ -24,8 +24,6 @@ st.write(" Message : ", x['Message'])
 st.write(" Date of issue : ", x['Date of issue'])
 if (x['Time of issue'] < 12):
     st.write(" Time of issue : ", str(x['Time of issue'])+" AM")
-elif(x['Time of issue '] >= 12 and x['Time of issue '] < 13  ):
-    st.write(" Time of issue  : ", str(x['Time of issue']) + " PM")
 else:
     st.write(" Time of issue : ", str(round(x['Time of issue']-12,2)) + " PM")
 if (x['Valid upto'] < 12):
