@@ -1,6 +1,6 @@
 streamlit
 numpy
-pandas == 1.1.3
+pandas
 urllib
 pymongo
 dns
