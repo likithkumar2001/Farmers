@@ -9,8 +9,8 @@ import dns
 from datetime import datetime
 
 def trans(language,text):
-    from googletrans import Translator, constants
-    translator = Translator()
+    import googletrans
+    translator = googletrans.Translator()
     Text_message = translator.translate(text, dest=language)
     return Text_message.text
 
