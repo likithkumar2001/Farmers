@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import json
 import urllib
-from pymongo import MongoClient
+import pymongo
 import dns
 from datetime import datetime
 
@@ -16,7 +16,7 @@ def trans(language,text):
 
 uri = 'mongodb+srv://likith:' + urllib.parse.quote(
     "Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-client = MongoClient(uri)
+client = pymongo.MongoClient(uri)
 db = client.weather
 data = db.data
 lang=['English','Telugu','Hindi']
