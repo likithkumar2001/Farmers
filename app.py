@@ -5,7 +5,7 @@ import pandas as pd
 import json
 import urllib
 from pymongo import MongoClient
-#import dns
+import dns
 from datetime import datetime
 st.title("**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**")
 uri = 'mongodb+srv://likith:' + urllib.parse.quote(
