@@ -41,6 +41,7 @@ for y in mydoc:
     x=y
 now = datetime.now()
 current_time = now.strftime("%H.%M")
+st.write(x['Valid upto'])
 if  x['Valid upto'] <= float(current_time):
     data = data_accumulation.web_scrapping();
     info = data_accumulation.data_cleaning(data);
