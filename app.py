@@ -11,7 +11,7 @@ import data_accumulation
 from googletrans import Translator, constants
 def trans(language,text):
     translator = Translator()
-    Text_message = translator.translate(text, dest=language)
+    Text_message = translator.translate(language, dest=text)
     return Text_message.text
 def data():
     uri = 'mongodb+srv://likith:' + urllib.parse.quote("Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
