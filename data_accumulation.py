@@ -53,6 +53,7 @@ def store_data(info):
     client = MongoClient( uri )
     db = client.weather
     data = db.data
+    x = data.delete_many({})
     result = data.insert_many(info)
     client.close()
 
