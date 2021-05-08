@@ -13,7 +13,6 @@ def trans(language,text):
     translator = Translator()
     Text_message = translator.translate(text, dest=language)
     return Text_message.text
-x=trans('te', 'HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....')
 def data():
     uri = 'mongodb+srv://likith:' + urllib.parse.quote("Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     client = MongoClient(uri)
@@ -36,7 +35,8 @@ def web(x):
             st.write(" Valid upto : ", str(x['Valid upto']) + " PM")
         else:
             st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
-st.title(trans('hi','HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....'))
+x=trans('te', 'HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....')
+x
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
 data = data();
 result = st.selectbox('Type your place here.....',data.distinct( "title"))
