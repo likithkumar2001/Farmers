@@ -35,7 +35,7 @@ def web(x):
             st.write(" Valid upto : ", str(x['Valid upto']) + " PM")
         else:
             st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
-x=trans('te', 'HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....')
+x=trans('te', 'hi')
 x
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
 data = data();
