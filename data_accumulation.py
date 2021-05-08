@@ -58,7 +58,4 @@ def store_data(info):
 
 data = web_scrapping();
 info = data_cleaning(data);
-store_data(info);'''
-id = 'NICOBAR';
-data=data_query(id);
-print(data)'''
+store_data(info);
