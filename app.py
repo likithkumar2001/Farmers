@@ -46,7 +46,6 @@ if  x['Valid upto'] <= float(ind_time):
     d = data_accumulation.web_scrapping();
     info = data_accumulation.data_cleaning(d);
     data_accumulation.store_data(info);
-    st.write("1")
 x = {'title': result}
 mydoc = data.find(x)
 x = "."
