@@ -50,7 +50,7 @@ client = MongoClient(uri)
 db = client.weather
 data = db.data
 client.close()
-x = {'title': 'HYDERABAD'}
+x = {'title': result}
 mydoc = data.find(x)
 x = "."
 for y in mydoc:
