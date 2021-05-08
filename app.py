@@ -34,3 +34,4 @@ if x['Message'] != 'No data Available' :
         st.write(" Valid upto : ", str(x['Valid upto']) + " PM")
     else:
         st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
+client.close()
