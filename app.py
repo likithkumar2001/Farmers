@@ -47,7 +47,7 @@ now = datetime.now()
 current_time = now.strftime("%H.%M")
 if  x['Valid upto'] <= float(current_time):
     data = data_accumulation.web_scrapping();
-    info = data_accumulation.data_accumulation.data_cleaning(data);
+    info = data_accumulation.data_cleaning(data);
     data_accumulation.store_data(info);
     data = data();
     x = {'title': result}
