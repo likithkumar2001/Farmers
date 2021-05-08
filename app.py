@@ -32,10 +32,10 @@ def web(x):
         else:
             st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
-data = data();
-result = st.selectbox('Type your place here.....',data.distinct( "title"))
+d = data();
+result = st.selectbox('Type your place here.....',d.distinct( "title"))
 x = {'title': result}
-mydoc = data.find(x)
+mydoc = d.find(x)
 x = "."
 for y in mydoc:
     x=y
