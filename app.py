@@ -43,8 +43,8 @@ ind_time = datetime.now(timezone("Asia/Kolkata")).strftime('%H.%M')
 st.write(x['Valid upto'])
 st.write(float(ind_time))
 if  x['Valid upto'] <= float(ind_time):
-    data = data_accumulation.web_scrapping();
-    info = data_accumulation.data_cleaning(data);
+    d = data_accumulation.web_scrapping();
+    info = data_accumulation.data_cleaning(d);
     data_accumulation.store_data(info);
     st.write("1")
 x = {'title': result}
