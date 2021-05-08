@@ -45,11 +45,6 @@ if  x['Valid upto'] <= float(current_time):
     data = data_accumulation.web_scrapping();
     info = data_accumulation.data_cleaning(data);
     data_accumulation.store_data(info);
-uri = "mongodb+srv://likith:"+urllib.parse.quote("Rp-iA@c6!Nq45c4")+"@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-client = MongoClient(uri)
-db = client.weather
-data = db.data
-client.close()
 x = {'title': result}
 mydoc = data.find(x)
 x = "."
