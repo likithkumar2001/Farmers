@@ -47,6 +47,7 @@ if  x['Valid upto'] <= float(ind_time):
     info = data_accumulation.data_cleaning(d);
     data_accumulation.store_data(info);
 x = {'title': result}
+data = data();
 mydoc = data.find(x)
 x = "."
 for y in mydoc:
