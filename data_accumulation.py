@@ -54,7 +54,7 @@ def store_data(info):
     db = client.weather
     data = db.data
     result = data.insert_many(info)
-    result
+    client.close()
 
     '''p=str(x).split("'Valid upto': '")
     t=p[1].split(" Hrs")
