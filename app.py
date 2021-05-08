@@ -7,7 +7,6 @@ import urllib
 from pymongo import MongoClient
 import dns
 from datetime import datetime
-
 uri = 'mongodb+srv://likith:' + urllib.parse.quote(
     "Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 client = MongoClient(uri)
