@@ -8,7 +8,7 @@ from pymongo import MongoClient
 import dns
 from datetime import datetime
 import data_accumulation
-from googletrans import Translator, constants
+from pytz import timezone 
 def data():
     uri = 'mongodb+srv://likith:' + urllib.parse.quote("Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     client = MongoClient(uri)
@@ -39,11 +39,10 @@ mydoc = data.find(x)
 x = "."
 for y in mydoc:
     x=y
-now = datetime.now()
-current_time = now.strftime("%H.%M")
+ind_time = datetime.now(timezone("Asia/Kolkata")).strftime('%H.%M')
 st.write(x['Valid upto'])
-st.write(float(current_time))
-if  x['Valid upto'] <= float(current_time):
+st.write(float(ind_time))
+if  x['Valid upto'] <= float(ind_time):
     data = data_accumulation.web_scrapping();
     info = data_accumulation.data_cleaning(data);
     data_accumulation.store_data(info);
