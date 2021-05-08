@@ -8,7 +8,7 @@ from pymongo import MongoClient
 import dns
 from datetime import datetime
 import data_accumulation
-from pytz import timezone 
+from googletrans import Translator, constants
 def data():
     uri = 'mongodb+srv://likith:' + urllib.parse.quote("Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     client = MongoClient(uri)
@@ -32,24 +32,25 @@ def web(x):
         else:
             st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
-d = data();
-result = st.selectbox('Type your place here.....',d.distinct( "title"))
+i = data();
+result = st.selectbox('Type your place here.....',i.distinct( "title"))
 x = {'title': result}
-mydoc = d.find(x)
+mydoc = i.find(x)
 x = "."
 for y in mydoc:
     x=y
-ind_time = datetime.now(timezone("Asia/Kolkata")).strftime('%H.%M')
-st.write(x['Valid upto'])
-st.write(float(ind_time))
-if  x['Valid upto'] <= float(ind_time):
-    d = data_accumulation.web_scrapping();
-    info = data_accumulation.data_cleaning(d);
+now = datetime.now()
+current_time = now.strftime("%H.%M")
+if  x['Valid upto'] <= float(current_time):
+    data = data_accumulation.web_scrapping();
+    info = data_accumulation.data_cleaning(data);
     data_accumulation.store_data(info);
-x = {'title': result}
-data = data();
-mydoc = data.find(x)
-x = "."
-for y in mydoc:
-    x=y
-web(x);
+    data = data();
+    x = {'title': result}
+    mydoc = data.find(x)
+    x = "."
+    for y in mydoc:
+        x=y
+    web(x)
+else:
+    web(x)
