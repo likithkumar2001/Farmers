@@ -56,9 +56,6 @@ def store_data(info):
     result = data.insert_many(info)
     client.close()
 
-    '''p=str(x).split("'Valid upto': '")
-    t=p[1].split(" Hrs")
-    return(int(t[0]))'''
 data = web_scrapping();
 info = data_cleaning(data);
 store_data(info);'''
