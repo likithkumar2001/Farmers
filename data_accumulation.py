@@ -28,7 +28,12 @@ def data_cleaning(data):
         data_json[i]['info'] = y.text
         p = data_json[i]['info'].split('Time of issue:')
         x= p[0].lstrip()
-        data_json[i]['Message'] = x.rstrip()
+        x= x.replace("/"," per ")
+        x = x.replace("mm"," milli meter ")
+        x = x.replace("hr"," hour ")
+        x = x.replace("<"," less then ")
+        x = x.replace(">", " greater then ")
+        data_json[i]['Message']=x.rstrip()
         data_json[i]['Type'] = data_json[i]['Message'].split(':')[0]
         if(len(p)>1):
             time = p[1].split('Valid upto:')
