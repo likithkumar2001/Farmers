@@ -35,6 +35,8 @@ def data_cleaning(data):
         x = x.replace(">", " greater then ")
         x = x.replace("-", " to ")
         x = x.replace("kmph", " kilometer per hour ")
+        x = x.replace("Low cloud to ground Lightning probability", "")
+        
         data_json[i]['Message']=x.rstrip()
         data_json[i]['Type'] = data_json[i]['Message'].split(':')[0]
         if(len(p)>1):
