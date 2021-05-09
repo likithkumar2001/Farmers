@@ -9,6 +9,11 @@ import dns
 from datetime import datetime
 import data_accumulation
 from googletrans import Translator, constants
+def trans(language,text):
+    from googletrans import Translator, constants
+    translator = Translator()
+    Text_message = translator.translate(text, dest=language)
+    return Text_message.text
 def data():
     uri = 'mongodb+srv://likith:' + urllib.parse.quote("Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     client = MongoClient(uri)
@@ -18,7 +23,7 @@ def data():
     return data
 def web(x):
     st.write('Place :', x['title'])
-    st.write('Message :', x['Message'])
+    st.write('Message :', trans('hi',x['Message']))
     if x['Message'] != 'No data Available' :
         st.write(" Date of issue : ", x['Date of issue'])
         if (x['Time of issue'] < 12):
