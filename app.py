@@ -23,7 +23,7 @@ def data():
     return data
 def web(x):
     st.write('Place :', x['title'])
-    st.write('Message :', trans('hi',x['Message']))
+    st.write('Message :', x['Message'])
     if x['Message'] != 'No data Available' :
         st.write(" Date of issue : ", x['Date of issue'])
         if (x['Time of issue'] < 12):
