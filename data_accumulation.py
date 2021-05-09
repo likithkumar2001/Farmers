@@ -33,6 +33,7 @@ def data_cleaning(data):
         x = x.replace("hr"," hour ")
         x = x.replace("<"," less then ")
         x = x.replace(">", " greater then ")
+        x = x.replace("-", " to ")
         data_json[i]['Message']=x.rstrip()
         data_json[i]['Type'] = data_json[i]['Message'].split(':')[0]
         if(len(p)>1):
