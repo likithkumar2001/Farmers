@@ -1,4 +1,4 @@
-#import Data_query
+from lang import trans
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -9,11 +9,6 @@ import dns
 from datetime import datetime
 import data_accumulation
 from googletrans import Translator, constants
-def trans(language,text):
-    from googletrans import Translator, constants
-    translator = Translator()
-    Text_message = translator.translate(text, dest=language)
-    return Text_message.text
 def data():
     uri = 'mongodb+srv://likith:' + urllib.parse.quote("Rp-iA@c6!Nq45c4") + '@cluster0.ms0ap.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
     client = MongoClient(uri)
@@ -37,6 +32,11 @@ def web(x):
         else:
             st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
+language = ['english','telugu','hindi','tamil']
+lan = []
+for i in language:
+    lan.append(lang.trans(str(i)[:2],i))
+res=st.sidebar.selectbox("select language",lan)
 i = data();
 result = st.selectbox('Type your place here.....',i.distinct( "title"))
 x = {'title': result}
