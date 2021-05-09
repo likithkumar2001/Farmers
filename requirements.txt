@@ -5,3 +5,4 @@ pymongo
 dnspython
 bs4
 datetime
+googletrans
