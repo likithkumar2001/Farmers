@@ -43,8 +43,6 @@ for y in mydoc:
 IST = pytz.timezone('Asia/Kolkata')
 now = datetime.now(IST)
 current_time = now.strftime("%H.%M")
-st.write(x['Valid upto'])
-st.write(float(current_time))
 if  x['Valid upto'] <= float(current_time):
     u = data_accumulation.web_scrapping();
     info = data_accumulation.data_cleaning(u);
@@ -55,6 +53,7 @@ if  x['Valid upto'] <= float(current_time):
     x = "."
     for y in mydoc:
         x=y
+    st.write(x['Valid upto'])
     web(x)
 else:
     web(x)
