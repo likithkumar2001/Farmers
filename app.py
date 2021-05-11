@@ -32,11 +32,6 @@ def web(x):
         else:
             st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
-language = ['english','telugu','hindi','tamil']
-lan = []
-for i in language:
-    lan.append(lang.trans(str(i)[:2],i))
-res=st.sidebar.selectbox("select language",lan)
 i = data();
 result = st.selectbox('Type your place here.....',i.distinct( "title"))
 x = {'title': result}
