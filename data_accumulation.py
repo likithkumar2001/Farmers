@@ -43,11 +43,11 @@ def data_cleaning(data):
             x = x.lstrip()
             x=x.split(" ")
             data_json[i]['Date of issue'] = x[0]
-            data_json[i]['Time of issue'] = int(x[1])/100
+            data_json[i]['Time of issue'] = float(x[1])/100
             x = time[1].rstrip()
             x = x.lstrip()
             x = x.split("Hrs")
-            data_json[i]['Valid upto'] = int(x[0])/100
+            data_json[i]['Valid upto'] = float(x[0])/100
         data_json[i].pop('info', None)
     return(data_json)
 
