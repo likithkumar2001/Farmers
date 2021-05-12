@@ -31,7 +31,7 @@ def web(x):
         elif(x['Valid upto'] >= 12 and x['Valid upto'] < 13  ):
             st.write(" Valid upto : ", str(x['Valid upto']) + " PM")
         else:
-            st.write(" Valid upto : ", str(x['Valid upto']-12) + " PM")
+            st.write(" Valid upto : ", Time of issue + " PM")
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
 i = data();
 result = st.selectbox('Type your place here.....',i.distinct( "title"))
