@@ -25,13 +25,13 @@ def web(x):
         if (x['Time of issue'] < 12):
             st.write(" Time of issue : ", str(x['Time of issue'])+" AM")
         else:
-            st.write(" Time of issue : ", str(round(x['Time of issue']-12,2)) + " PM")
+            st.write(" Time of issue : ", str(round(x['Time of issue']-12,3)) + " PM")
         if (x['Valid upto'] < 12):
             st.write(" Valid upto : ", str(x['Valid upto'])+" AM")
         elif(x['Valid upto'] >= 12 and x['Valid upto'] < 13  ):
             st.write(" Valid upto : ", str(x['Valid upto']) + " PM")
         else:
-            st.write(" Valid upto : ", str(round((x['Valid upto']-12),2)) + " PM")
+            st.write(" Valid upto : ", str(round((x['Valid upto']-12),3)) + " PM")
 st.title('**HERE YOU GET UPTO DATE INFORMATION ABOUT WEATHER All OVER INDIA.....**')
 i = data();
 result = st.selectbox('Type your place here.....',i.distinct( "title"))
