@@ -53,7 +53,6 @@ if  x['Valid upto'] <= float(current_time):
     x = "."
     for y in mydoc:
         x=y
-    st.write(x['Valid upto'])
     web(x)
 else:
     web(x)
