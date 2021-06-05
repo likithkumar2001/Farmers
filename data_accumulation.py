@@ -5,6 +5,7 @@ def web_scrapping():
     import re
     url = "https://mausam.imd.gov.in/imd_latest/contents/districtwisewarnings.php"
     html = requests.get(url)
+    html.close()
     soup_day = BeautifulSoup(html.content, 'html.parser')
     data =str(soup_day.find_all('script')[7])
     return(data)
